@@ -19,7 +19,7 @@
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   color: var(--ink);
-  background:#fff;
+  background:#e5f7cd;
 }
 
 /* --------------------
@@ -124,6 +124,10 @@ body{
   position: relative;
   padding: 2.8rem 0 1.6rem;
   overflow:hidden;
+  background:     
+    radial-gradient(900px 400px at 15% 10%, rgba(51,91,0,.50), transparent 55%),
+    radial-gradient(700px 420px at 95% 15%, rgba(102,182,0,.50), transparent 50%),
+    linear-gradient(180deg, #fbfbff 0%, #ffffff 60%);;
 }
 
 .hero-surface{
@@ -260,8 +264,8 @@ body{
 .courses-section{
   position: relative;
   background:
-    radial-gradient(900px 400px at 15% 10%, rgba(109,93,246,.12), transparent 55%),
-    radial-gradient(700px 420px at 95% 15%, rgba(138,124,255,.12), transparent 50%),
+    radial-gradient(900px 400px at 15% 10%, rgba(51,91,0,.20), transparent 55%),
+    radial-gradient(700px 420px at 95% 15%, rgba(102,182,0,.20), transparent 50%),
     linear-gradient(180deg, #fbfbff 0%, #ffffff 60%);
   overflow: hidden;
 }
@@ -394,7 +398,7 @@ body{
   left: 240px;
   width: 140px;
   height: 95px;
-  background-image: radial-gradient(rgba(109,93,246,.35) 1.6px, transparent 1.6px);
+  background-image: radial-gradient(rgba(51,91,0,.35) 1.6px, transparent 1.6px);
   background-size: 10px 10px;
   opacity: .7;
   border-radius: 14px;
@@ -454,61 +458,6 @@ body{
 .sparkle span:nth-child(4){ transform: rotate(135deg); }
 
 /* --------------------
-   CTA Section
--------------------- */
-.cta-section{ padding: 56px 0; background: #fff; }
-
-.cta-card{
-  position: relative;
-  overflow:hidden;
-  border-radius: 22px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(232,234,246,.9);
-  background:
-    linear-gradient(90deg, rgba(10,23,48,.88), rgba(10,23,48,.60)),
-    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop");
-  background-size: cover;
-  background-position: center;
-  padding: 44px 46px;
-}
-
-.cta-kicker{
-  color: rgba(255,255,255,.75);
-  font-weight: 900;
-  letter-spacing: .04em;
-  margin-bottom: 10px;
-}
-.cta-title{
-  color: #fff;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
-  font-size: clamp(1.7rem, 2.4vw, 2.6rem);
-}
-.cta-phone{ color: #ffd56a; }
-
-.play-wrap{
-  display:inline-flex;
-  align-items:center;
-  gap: 14px;
-  text-decoration:none;
-  color:#fff;
-}
-.play-btn{
-  width: 58px;
-  height: 58px;
-  border-radius: 999px;
-  display:grid;
-  place-items:center;
-  background: rgba(255,255,255,.16);
-  border: 1px solid rgba(255,255,255,.22);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 16px 34px rgba(0,0,0,.22);
-}
-.play-btn i{ font-size: 1.6rem; margin-left: 2px; }
-.play-text{ text-transform: lowercase; opacity:.9; font-weight: 800; }
-
-/* --------------------
    Choose Section + Stats
 -------------------- */
 .choose-desc{
@@ -519,8 +468,8 @@ body{
 }
 
 .choose-box{
-  background: rgba(109,93,246,.08);
-  border: 1px solid rgba(109,93,246,.14);
+  background: rgba(51,91,0,.08);
+  border: 1px solid rgba(51,91,0,.14);
   border-radius: 14px;
   padding: 14px 14px;
 }
@@ -605,7 +554,7 @@ body{
 .testi-section{
   position: relative;
   background:
-    radial-gradient(700px 340px at 15% 12%, rgba(109,93,246,.10), transparent 55%),
+    radial-gradient(700px 340px at 15% 12%, rgba(51,91,0,.30), transparent 55%),
     linear-gradient(180deg, #f7f8ff 0%, #ffffff 80%);
   overflow:hidden;
 }
@@ -614,8 +563,8 @@ body{
   position:absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 25% 45%, rgba(109,93,246,.08) 0 2px, transparent 3px),
-    radial-gradient(circle at 70% 35%, rgba(109,93,246,.07) 0 2px, transparent 3px);
+    radial-gradient(circle at 25% 45%, rgba(51,91,0,.08) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 35%, rgba(51,91,0,.07) 0 2px, transparent 3px);
   background-size: 220px 140px;
   opacity: .55;
   pointer-events:none;
@@ -729,7 +678,7 @@ body{
 -------------------- */
 .gain-section{
   background:
-    radial-gradient(700px 320px at 10% 15%, rgba(109,93,246,.10), transparent 55%),
+    radial-gradient(700px 320px at 10% 15%, rgba(51,91,0,.30), transparent 55%),
     linear-gradient(180deg, #fbfbff 0%, #ffffff 60%);
 }
 
@@ -850,9 +799,9 @@ body{
 }
 
 .blog-btn{
-  background: rgba(109,93,246,.12);
+  background: rgba(51,91,0,.12);
   color: var(--brand);
-  border: 1px solid rgba(109,93,246,.22);
+  border: 1px solid rgba(51,91,0,.22);
   font-weight: 900;
   padding: .5rem .9rem;
 }
@@ -863,7 +812,7 @@ body{
 ========================= */
 .contact-section{
   background:
-    radial-gradient(700px 320px at 10% 15%, rgba(109,93,246,.10), transparent 55%),
+    radial-gradient(700px 320px at 10% 15%, rgba(51,91,0,.10), transparent 55%),
     linear-gradient(180deg, #fbfbff 0%, #ffffff 60%);
 }
 
@@ -935,7 +884,7 @@ body{
   padding: 10px 12px;
   border-radius: 12px;
   background: rgba(109,93,246,.08);
-  border: 1px solid rgba(109,93,246,.14);
+  border: 1px solid rgba(51,91,0,.14);
   color: #334155;
   font-weight: 800;
   font-size: .9rem;
@@ -963,15 +912,15 @@ body{
 }
 
 .ui-input:focus{
-  border-color: rgba(109,93,246,.50) !important;
-  box-shadow: 0 0 0 .25rem rgba(109,93,246,.12) !important;
+  border-color: rgba(51,91,0,.50) !important;
+  box-shadow: 0 0 0 .25rem rgba(51,91,0,.12) !important;
 }
 
 .fancy-check .form-check-input{
   width: 1.15em;
   height: 1.15em;
   border-radius: .35rem;
-  border-color: rgba(109,93,246,.35);
+  border-color: rgba(51,91,0,.35);
 }
 .fancy-check .form-check-input:checked{
   background-color: var(--brand);
@@ -1118,10 +1067,10 @@ body{
   place-items:center;
   text-decoration:none;
   color:#fff;
-  background: rgba(109,93,246,.20);
+  background: rgba(51,91,0,.20);
   border: 1px solid rgba(255,255,255,.10);
 }
-.footer-socials .social-btn:hover{ background: rgba(109,93,246,.35); }
+.footer-socials .social-btn:hover{ background: rgba(51,91,0,.35); }
 
 .footer-title{
   color:#fff;
