@@ -3,1078 +3,346 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>e.ComAcademy - Modular Short Course</title>
+  <title>GreenStore - E-Commerce Home</title>
 
-  <!-- Bootstrap 5.3.3 (Latest) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+  
+  <link rel="stylesheet" href="style.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#mainNav" tabindex="0">
 
-  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg site-nav py-3 navbar-light sticky-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L3 6.5L12 11L21 6.5L12 2Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M3 11L12 15.5L21 11" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M3 15.5L12 20L21 15.5" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-          </svg>
+        <span class="brand-mark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+            </svg>
         </span>
-        <span class="brand-name">e.ComAcademy</span>
+        <span class="brand-name">GreenStore</span>
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="mainNav">
-		<ul class="navbar-nav mx-auto align-items-lg-center gap-lg-1">
-		  <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-		  <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-		  <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
-		  <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-		  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-		</ul>
+        <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">New Arrivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#deals">Daily Deals</a></li>
+        </ul>
 
-
-        <a class="btn btn-brand btn-pill text-white d-inline-flex align-items-center gap-2" href="#">
-          Create Account <i class="bi bi-arrow-right"></i>
-        </a>
+        <div class="d-flex align-items-center gap-3">
+             <a href="#" class="text-dark position-relative">
+                <i class="bi bi-search fs-5"></i>
+             </a>
+             <a href="#" class="btn btn-brand btn-pill text-white d-inline-flex align-items-center gap-2">
+                <i class="bi bi-cart3"></i> My Cart <span class="badge bg-white text-success rounded-pill">2</span>
+             </a>
+        </div>
       </div>
     </div>
   </nav>
 
-
-<!-- HERO -->
-<header class="hero" id="home">
-  <div class="container">
-    <div class="hero-surface">
-      <div class="row g-4 align-items-center">
-
-        <!-- Left -->
-        <div class="col-lg-6">
-          <div class="hero-left">
-            <div class="hero-kicker">WELCOME E.COMACADEMY ONLINE COURSES</div>
-
-            <h1 class="hero-title">
-              Achieving Your Dreams<br/>Through Education
-            </h1>
-
-            <p class="hero-desc">
-              We are experienced in educational platform and skilled strategies for the success of our online learning.
-            </p>
-
-            <div class="hero-cta">
-              <a href="#courses" class="btn btn-darksoft btn-pill">Find Courses</a>
-              <a href="#about" class="btn btn-outline-secondary btn-pill">Learn More</a>
-            </div>
-
-            <svg class="hero-dash" viewBox="0 0 300 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M10,55 C70,10 120,95 180,50 C220,20 250,30 285,25"
-                    fill="none" stroke="rgba(109,93,246,.9)" stroke-width="3"
-                    stroke-dasharray="6 7" stroke-linecap="round"/>
-              <path d="M282 24 L292 18 L288 28 Z" fill="rgba(109,93,246,.9)"/>
-            </svg>
-          </div>
-        </div>
-
-        <!-- Right (Carousel Only) -->
-        <div class="col-lg-6">
-          <div class="hero-right hero-carousel">
-
-            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
-              <!-- Indicators -->
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-
-              <!-- Slides -->
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop"
-                    class="d-block w-100 hero-slide-img"
-                    alt="Students 1"
-                  />
-                </div>
-
-                <div class="carousel-item">
-                  <img
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop"
-                    class="d-block w-100 hero-slide-img"
-                    alt="Students 2"
-                  />
-                </div>
-
-                <div class="carousel-item">
-                  <img
-                    src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop"
-                    class="d-block w-100 hero-slide-img"
-                    alt="Students 3"
-                  />
-                </div>
-              </div>
-
-              <!-- Controls -->
-              <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-
-              <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</header>
-
-
-  <!-- ABOUT US -->
-  <section class="about-section py-5" id="about">
+  <header class="hero" id="hero">
     <div class="container">
-      <div class="row align-items-center g-5">
+      <div class="hero-surface">
+        <div class="row g-4 align-items-center">
 
-        <div class="col-lg-6">
-          <div class="about-collage">
-            <div class="tile tile-1">
-              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&auto=format&fit=crop" alt="Teacher">
-            </div>
-            <div class="tile tile-2">
-              <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?q=80&w=1200&auto=format&fit=crop" alt="Campus">
-            </div>
-            <div class="tile tile-3">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop" alt="Students">
-            </div>
+          <div class="col-lg-6">
+            <div class="hero-left">
+              <div class="hero-kicker">SPRING COLLECTION 2026</div>
 
-            <div class="dots-box" aria-hidden="true"></div>
+              <h1 class="hero-title">
+                Sustainable Style <br/>
+                <span class="circle-underline">Naturally</span> Yours.
+              </h1>
 
-            <div class="exp-badge">
-              <div class="exp-num">8+</div>
-              <div class="exp-text">Years Of<br/>Experiences</div>
-            </div>
+              <p class="hero-desc">
+                Discover our new range of eco-friendly products, crafted with care for you and the planet. Free shipping on orders over $50.
+              </p>
 
-            <div class="sparkle" aria-hidden="true">
-              <span></span><span></span><span></span><span></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <span class="chip">OUR ABOUT US</span>
-
-          <h2 class="section-title mt-3 mb-3">
-            Learn &amp; Grow Your <span class="circle-underline">Skills</span><br/>From Anywhere
-          </h2>
-
-          <p class="about-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-          </p>
-
-          <div class="row g-4 mt-2">
-            <div class="col-md-6">
-              <div class="about-feature">
-                <div class="about-feature-title">FLEXIBLE CLASSNMAEES</div>
-                <p class="about-feature-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+              <div class="d-flex gap-3">
+                <a href="#products" class="btn btn-darksoft btn-pill">Shop Now</a>
+                <a href="#categories" class="btn btn-outline-secondary btn-pill">View Catalog</a>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="about-feature">
-                <div class="about-feature-title">FLEXIBLE CLASSNMAEES</div>
-                <p class="about-feature-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
+
+              <svg class="hero-dash" viewBox="0 0 300 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M10,55 C70,10 120,95 180,50 C220,20 250,30 285,25" fill="none" stroke="rgba(102,182,0,.9)" stroke-width="3" stroke-dasharray="6 7" stroke-linecap="round"/>
+                <path d="M282 24 L292 18 L288 28 Z" fill="rgba(102,182,0,.9)"/>
+              </svg>
             </div>
           </div>
 
-          <div class="mt-4">
-            <a href="#courses" class="btn btn-brand btn-pill d-inline-flex align-items-center gap-2">
-              Load More <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+          <div class="col-lg-6">
+            <div class="hero-right hero-carousel">
+              <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- CATEGORIES -->
-  <section class="py-5" id="categories">
-    <div class="container">
-      <div class="text-center">
-        <span class="chip">CATEGORIES</span>
-        <h2 class="section-title mt-3">Browse By Categories</h2>
-      </div>
-
-      <div class="row g-4 mt-1">
-        <div class="col-md-6 col-lg-4">
-          <div class="cat-card d-flex align-items-center">
-            <div class="cat-icon bg-blue"><i class="bi bi-briefcase fs-4"></i></div>
-            <p class="cat-title">Business Management</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="cat-card d-flex align-items-center">
-            <div class="cat-icon bg-pink"><i class="bi bi-palette fs-4"></i></div>
-            <p class="cat-title">Arts &amp; Design</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="cat-card d-flex align-items-center">
-            <div class="cat-icon bg-green"><i class="bi bi-person-check fs-4"></i></div>
-            <p class="cat-title">Personal Development</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="cat-card d-flex align-items-center">
-            <div class="cat-icon bg-amber"><i class="bi bi-columns-gap fs-4"></i></div>
-            <p class="cat-title">UI/UX Design</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="cat-card d-flex align-items-center">
-            <div class="cat-icon bg-purple"><i class="bi bi-vector-pen fs-4"></i></div>
-            <p class="cat-title">Graphic Design</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="cat-card d-flex align-items-center">
-            <div class="cat-icon bg-rose"><i class="bi bi-megaphone fs-4"></i></div>
-            <p class="cat-title">Digital Marketing</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="cat-card d-flex align-items-center">
-            <div class="cat-icon bg-slate"><i class="bi bi-gem fs-4"></i></div>
-            <p class="cat-title">Exclusive Man</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="cat-card d-flex align-items-center">
-            <div class="cat-icon bg-peach"><i class="bi bi-box-seam fs-4"></i></div>
-            <p class="cat-title">Product Design</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="cat-card d-flex align-items-center">
-            <div class="cat-icon bg-sky"><i class="bi bi-camera-video fs-4"></i></div>
-            <p class="cat-title">Video &amp; Photography</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- TOP POPULAR COURSES -->
-  <section class="courses-section py-5" id="courses">
-    <div class="container position-relative">
-
-      <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-between gap-3 mb-4">
-        <div>
-          <span class="chip">TOP POPULAR COURSE</span>
-          <h2 class="section-title mt-3 mb-0">e.ComAcademy Course Student Can<br/>Join With Us.</h2>
-        </div>
-
-        <a href="#" class="btn btn-brand btn-pill d-inline-flex align-items-center gap-2">
-          Load More Course <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
-
-      <svg class="decor-curve" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M10 120 C60 30, 140 160, 210 20" fill="none" stroke="rgba(109,93,246,.55)" stroke-width="3" stroke-linecap="round"/>
-      </svg>
-
-      <div class="row g-4">
-        <!-- Repeatable Course Card (x6) -->
-        <div class="col-md-6 col-lg-4">
-          <article class="course-card h-100">
-            <div class="thumb">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Course">
-              <span class="tag">Digital Marketing</span>
-            </div>
-            <div class="card-bodyx">
-              <div class="meta-top d-flex align-items-center justify-content-between">
-                <div class="rating d-flex align-items-center gap-2">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 hero-slide-img" alt="Product 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="fw-bold text-shadow">Nike Red Limited</h5>
+                    </div>
                   </div>
-                  <span class="rate-text">4.5k</span>
-                </div>
-                <div class="price">$50.00</div>
-              </div>
-
-              <h3 class="course-title">It Statistics Data Science And Business Analysis</h3>
-
-              <div class="info-row">
-                <span><i class="bi bi-journal-text"></i> Lesson 10</span>
-                <span><i class="bi bi-clock"></i> 19h 30m</span>
-                <span><i class="bi bi-people"></i> Students 20+</span>
-              </div>
-
-              <div class="card-footerx d-flex align-items-center justify-content-between">
-                <div class="instructor d-flex align-items-center gap-2">
-                  <img class="avatar-img" src="https://i.pravatar.cc/60?img=32" alt="Instructor">
-                  <span class="name">Samantha</span>
-                </div>
-                <a href="#" class="btn btn-enroll btn-pill">Enroll <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <article class="course-card h-100">
-            <div class="thumb">
-              <img src="https://images.unsplash.com/photo-1522205408450-add114ad53fe?q=80&w=1200&auto=format&fit=crop" alt="Course">
-              <span class="tag">Digital Marketing</span>
-            </div>
-            <div class="card-bodyx">
-              <div class="meta-top d-flex align-items-center justify-content-between">
-                <div class="rating d-flex align-items-center gap-2">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                  <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 hero-slide-img" alt="Product 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="fw-bold text-shadow">Pro Audio Gear</h5>
+                    </div>
                   </div>
-                  <span class="rate-text">4.5k</span>
-                </div>
-                <div class="price">$50.00</div>
-              </div>
-
-              <h3 class="course-title">Adobe Illustrator For Graphic Design</h3>
-
-              <div class="info-row">
-                <span><i class="bi bi-journal-text"></i> Lesson 10</span>
-                <span><i class="bi bi-clock"></i> 19h 30m</span>
-                <span><i class="bi bi-people"></i> Students 20+</span>
-              </div>
-
-              <div class="card-footerx d-flex align-items-center justify-content-between">
-                <div class="instructor d-flex align-items-center gap-2">
-                  <img class="avatar-img" src="https://i.pravatar.cc/60?img=12" alt="Instructor">
-                  <span class="name">Charles</span>
-                </div>
-                <a href="#" class="btn btn-enroll btn-pill">Enroll <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <article class="course-card h-100">
-            <div class="thumb">
-              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Course">
-              <span class="tag">Digital Marketing</span>
-            </div>
-            <div class="card-bodyx">
-              <div class="meta-top d-flex align-items-center justify-content-between">
-                <div class="rating d-flex align-items-center gap-2">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                  <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 hero-slide-img" alt="Product 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="fw-bold text-shadow">Smart Accessories</h5>
+                    </div>
                   </div>
-                  <span class="rate-text">4.5k</span>
-                </div>
-                <div class="price">Php5000.00</div>
-              </div>
-
-              <h3 class="course-title">Starting SEO As Your Home Based Business</h3>
-
-              <div class="info-row">
-                <span><i class="bi bi-journal-text"></i> Lesson 10</span>
-                <span><i class="bi bi-clock"></i> 19h 30m</span>
-                <span><i class="bi bi-people"></i> Students 20+</span>
-              </div>
-
-              <div class="card-footerx d-flex align-items-center justify-content-between">
-                <div class="instructor d-flex align-items-center gap-2">
-                  <img class="avatar-img" src="https://i.pravatar.cc/60?img=49" alt="Instructor">
-                  <span class="name">Morgan</span>
-                </div>
-                <a href="#" class="btn btn-enroll btn-pill">Enroll <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <!-- 2nd row -->
-        <div class="col-md-6 col-lg-4">
-          <article class="course-card h-100">
-            <div class="thumb">
-              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Course">
-              <span class="tag">Digital Marketing</span>
-            </div>
-            <div class="card-bodyx">
-              <div class="meta-top d-flex align-items-center justify-content-between">
-                <div class="rating d-flex align-items-center gap-2">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-                  </div>
-                  <span class="rate-text">4.5k</span>
-                </div>
-                <div class="price">Php5000.00</div>
-              </div>
-
-              <h3 class="course-title">Bilginer Adobe Illustrator For Graphic Design</h3>
-
-              <div class="info-row">
-                <span><i class="bi bi-journal-text"></i> Lesson 10</span>
-                <span><i class="bi bi-clock"></i> 19h 30m</span>
-                <span><i class="bi bi-people"></i> Students 20+</span>
-              </div>
-
-              <div class="card-footerx d-flex align-items-center justify-content-between">
-                <div class="instructor d-flex align-items-center gap-2">
-                  <img class="avatar-img" src="https://i.pravatar.cc/60?img=8" alt="Instructor">
-                  <span class="name">Brian Brewer</span>
-                </div>
-                <a href="#" class="btn btn-enroll btn-pill">Enroll <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <article class="course-card h-100">
-            <div class="thumb">
-              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop" alt="Course">
-              <span class="tag">Digital Marketing</span>
-            </div>
-            <div class="card-bodyx">
-              <div class="meta-top d-flex align-items-center justify-content-between">
-                <div class="rating d-flex align-items-center gap-2">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-                  </div>
-                  <span class="rate-text">4.5k</span>
-                </div>
-                <div class="price">Php5000.00</div>
-              </div>
-
-              <h3 class="course-title">It Statistics Data Science And Business Analysis</h3>
-
-              <div class="info-row">
-                <span><i class="bi bi-journal-text"></i> Lesson 10</span>
-                <span><i class="bi bi-clock"></i> 19h 30m</span>
-                <span><i class="bi bi-people"></i> Students 20+</span>
-              </div>
-
-              <div class="card-footerx d-flex align-items-center justify-content-between">
-                <div class="instructor d-flex align-items-center gap-2">
-                  <img class="avatar-img" src="https://i.pravatar.cc/60?img=58" alt="Instructor">
-                  <span class="name">Rodriguez</span>
-                </div>
-                <a href="#" class="btn btn-enroll btn-pill">Enroll <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <article class="course-card h-100">
-            <div class="thumb">
-              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop" alt="Course">
-              <span class="tag">Digital Marketing</span>
-            </div>
-            <div class="card-bodyx">
-              <div class="meta-top d-flex align-items-center justify-content-between">
-                <div class="rating d-flex align-items-center gap-2">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-                  </div>
-                  <span class="rate-text">4.5k</span>
-                </div>
-                <div class="price">Php5000.00</div>
-              </div>
-
-              <h3 class="course-title">Starting SEO As Your Home Based Business</h3>
-
-              <div class="info-row">
-                <span><i class="bi bi-journal-text"></i> Lesson 10</span>
-                <span><i class="bi bi-clock"></i> 19h 30m</span>
-                <span><i class="bi bi-people"></i> Students 20+</span>
-              </div>
-
-              <div class="card-footerx d-flex align-items-center justify-content-between">
-                <div class="instructor d-flex align-items-center gap-2">
-                  <img class="avatar-img" src="https://i.pravatar.cc/60?img=47" alt="Instructor">
-                  <span class="name">Morgan</span>
-                </div>
-                <a href="#" class="btn btn-enroll btn-pill">Enroll <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE US -->
-  <section class="choose-section py-5">
-    <div class="container">
-      <div class="row align-items-center g-5">
-
-        <div class="col-lg-6">
-          <span class="chip">WHY CHOOSE US</span>
-
-          <h2 class="section-title mt-3 mb-3">
-            Creating A Community Of<br/>
-            Life Long <span class="circle-underline">Learners.</span>
-          </h2>
-
-          <p class="choose-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris..
-          </p>
-
-          <div class="row g-3 mt-3">
-            <div class="col-md-6">
-              <div class="choose-box">
-                <div class="choose-box-title"><i class="bi bi-check-circle-fill"></i> World ClassName Trainers</div>
-                <div class="choose-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="choose-box">
-                <div class="choose-box-title"><i class="bi bi-check-circle-fill"></i> Easy Learning</div>
-                <div class="choose-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="choose-box">
-                <div class="choose-box-title"><i class="bi bi-check-circle-fill"></i> Flexible</div>
-                <div class="choose-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elitr</div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="choose-box">
-                <div class="choose-box-title"><i class="bi bi-check-circle-fill"></i> Affordable Price</div>
-                <div class="choose-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="choose-frame">
-            <div class="choose-dots" aria-hidden="true"></div>
-            <img
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400&auto=format&fit=crop"
-              alt="Students"
-            />
-          </div>
-        </div>
-
-      </div>
-
-      <div class="stats-pill mt-5">
-        <div class="row g-3 align-items-center">
-          <div class="col-6 col-lg-3">
-            <div class="stat-item">
-              <div class="stat-ico"><i class="bi bi-mortarboard"></i></div>
-              <div>
-                <div class="stat-num">3K+</div>
-                <div class="stat-label">Successfully Trained</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-6 col-lg-3">
-            <div class="stat-item">
-              <div class="stat-ico"><i class="bi bi-journal-check"></i></div>
-              <div>
-                <div class="stat-num">15K+</div>
-                <div class="stat-label">Classes Completed</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-6 col-lg-3">
-            <div class="stat-item">
-              <div class="stat-ico"><i class="bi bi-emoji-smile"></i></div>
-              <div>
-                <div class="stat-num">97K+</div>
-                <div class="stat-label">Satisfaction Rate</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-6 col-lg-3">
-            <div class="stat-item">
-              <div class="stat-ico"><i class="bi bi-people"></i></div>
-              <div>
-                <div class="stat-num">102K+</div>
-                <div class="stat-label">Students Community</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- TESTIMONIALS -->
-  <section class="testi-section py-5">
-    <div class="container">
-      <div class="text-center mb-4">
-        <span class="chip">TESTIMONIAL</span>
-        <h2 class="section-title mt-3 mb-0">Creating A Community Of<br/>Life Long Learners.</h2>
-      </div>
-
-      <div class="row g-4 justify-content-center mt-2">
-        <div class="col-md-6 col-lg-4">
-          <div class="testi-card">
-            <div class="quote-mark">“</div>
-            <p class="testi-text">
-              “Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci nulla pellentesque dignissim enim.”
-            </p>
-            <div class="testi-name">Kathy Sullivan</div>
-            <div class="testi-role">CEO at ordian it</div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="testi-card testi-active">
-            <div class="quote-mark">“</div>
-            <p class="testi-text">
-              “Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci nulla pellentesque dignissim enim.”
-            </p>
-            <div class="testi-name">Elsie Stroud</div>
-            <div class="testi-role">CEO at Edwards</div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="testi-card">
-            <div class="quote-mark">“</div>
-            <p class="testi-text">
-              “Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci nulla pellentesque dignissim enim.”
-            </p>
-            <div class="testi-name">Kathy Sullivan</div>
-            <div class="testi-role">CEO at ordian it</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- OUR INSTRUCTOR -->
-  <section class="instructor-section py-5" id="instructors">
-    <div class="container">
-      <div class="row align-items-center g-5">
-
-        <div class="col-lg-5">
-          <span class="chip">OUR INSTRUCTOR</span>
-          <h2 class="section-title mt-3 mb-3">Meet Our Expert<br/>Instructor</h2>
-          <p class="about-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris..
-          </p>
-
-          <div class="d-flex flex-wrap gap-3 mt-4">
-            <a href="#contact" class="btn btn-brand btn-pill">Contact Us <i class="bi bi-arrow-right ms-1"></i></a>
-            <a href="#courses" class="btn btn-outline-secondary btn-pill">Find Courses <i class="bi bi-arrow-right ms-1"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-7">
-          <div class="instructor-grid">
-            <article class="inst-card">
-              <button class="inst-share" aria-label="share"><i class="bi bi-share"></i></button>
-              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop" alt="Instructor">
-              <div class="inst-ribbon">
-                <div>
-                  <div class="inst-name">Esther Howard</div>
-                  <div class="inst-role">Junior Instructor</div>
-                </div>
-                <span class="inst-arrow"><i class="bi bi-arrow-right"></i></span>
-              </div>
-            </article>
-
-            <article class="inst-card">
-              <button class="inst-share" aria-label="share"><i class="bi bi-share"></i></button>
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=900&auto=format&fit=crop" alt="Instructor">
-              <div class="inst-ribbon">
-                <div>
-                  <div class="inst-name">Beverly Hathcock</div>
-                  <div class="inst-role">Junior Instructor</div>
-                </div>
-                <span class="inst-arrow"><i class="bi bi-arrow-right"></i></span>
-              </div>
-            </article>
-
-            <article class="inst-card">
-              <button class="inst-share" aria-label="share"><i class="bi bi-share"></i></button>
-              <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=900&auto=format&fit=crop" alt="Instructor">
-              <div class="inst-ribbon">
-                <div>
-                  <div class="inst-name">Donald Gonzales</div>
-                  <div class="inst-role">Junior Instructor</div>
-                </div>
-                <span class="inst-arrow"><i class="bi bi-arrow-right"></i></span>
-              </div>
-            </article>
-
-            <article class="inst-card">
-              <button class="inst-share" aria-label="share"><i class="bi bi-share"></i></button>
-              <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=900&auto=format&fit=crop" alt="Instructor">
-              <div class="inst-ribbon">
-                <div>
-                  <div class="inst-name">Eddie Lenz</div>
-                  <div class="inst-role">Junior Instructor</div>
-                </div>
-                <span class="inst-arrow"><i class="bi bi-arrow-right"></i></span>
-              </div>
-            </article>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- DISCOVER YOUR GAIN -->
-  <section class="gain-section py-5">
-    <div class="container">
-      <div class="text-center mb-4">
-        <span class="chip">CHOOSE YOUR CAREER</span>
-        <h2 class="section-title mt-3 mb-0">Discover Your Gain</h2>
-      </div>
-
-      <div class="row g-4 justify-content-center">
-        <div class="col-lg-6">
-          <div class="gain-card gain-green">
-            <div class="gain-content">
-              <div class="gain-kicker">Start From Today</div>
-              <h3 class="gain-title">Join Our Training Courses &amp;<br/>Build Your Skill.</h3>
-              <a href="#courses" class="btn gain-btn">Join Now <i class="bi bi-arrow-right"></i></a>
-            </div>
-            <img class="gain-img" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop" alt="Student"/>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="gain-card gain-yellow">
-            <div class="gain-content">
-              <div class="gain-kicker">Start From Today</div>
-              <h3 class="gain-title">Join Our Training Courses &amp;<br/>Build Your Skill.</h3>
-              <a href="#courses" class="btn gain-btn gain-btn-alt">Join Now <i class="bi bi-arrow-right"></i></a>
-            </div>
-            <img class="gain-img" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=900&auto=format&fit=crop" alt="Student"/>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- BLOG POSTS -->
-  <section class="blog-section py-5" id="blog">
-    <div class="container">
-      <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-between gap-3 mb-4">
-        <div>
-          <span class="chip">BLOG POST</span>
-          <h2 class="section-title mt-3 mb-0">Most Popular Post.</h2>
-        </div>
-
-        <a href="#" class="btn btn-brand btn-pill d-inline-flex align-items-center gap-2">
-          All Blog Post <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <article class="blog-card h-100">
-            <div class="blog-thumb">
-              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop" alt="Blog">
-            </div>
-            <div class="blog-body">
-              <div class="blog-meta">
-                <span><i class="bi bi-calendar-event"></i> 14 June 2023</span>
-                <span><i class="bi bi-chat-dots"></i> Comment (06)</span>
-              </div>
-              <h3 class="blog-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h3>
-              <a href="#" class="btn blog-btn btn-pill">Read More <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <article class="blog-card h-100">
-            <div class="blog-thumb">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Blog">
-            </div>
-            <div class="blog-body">
-              <div class="blog-meta">
-                <span><i class="bi bi-calendar-event"></i> 21 April 2024</span>
-                <span><i class="bi bi-chat-dots"></i> Comment (06)</span>
-              </div>
-              <h3 class="blog-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h3>
-              <a href="#" class="btn blog-btn btn-pill">Read More <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <article class="blog-card h-100">
-            <div class="blog-thumb">
-              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Blog">
-            </div>
-            <div class="blog-body">
-              <div class="blog-meta">
-                <span><i class="bi bi-calendar-event"></i> 14 June 2023</span>
-                <span><i class="bi bi-chat-dots"></i> Comment (06)</span>
-              </div>
-              <h3 class="blog-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h3>
-              <a href="#" class="btn blog-btn btn-pill">Read More <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-<section class="contact-section py-5" id="contact">
-  <div class="container">
-    <div class="text-center mb-4">
-      <span class="chip">CONTACT</span>
-      <h2 class="section-title mt-3 mb-2">Get In Touch</h2>
-      <p class="contact-sub mx-auto mb-0">
-        Let’s study together! Send us a message and we’ll reply as soon as possible.
-      </p>
-    </div>
-
-    <div class="row g-4 align-items-stretch">
-      <!-- MAP -->
-      <div class="col-lg-6">
-        <div class="contact-card h-100">
-          <div class="contact-card-head">
-            <div class="d-flex align-items-center gap-2">
-              <span class="contact-icon"><i class="bi bi-geo-alt"></i></span>
-              <div>
-                <div class="contact-card-title">Our Location</div>
-                <div class="contact-card-muted">Visit us anytime</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="map-frame">
-            <iframe
-              title="Google Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.9446027400186!2d120.99178971532284!3d14.599512589814065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9f88f000000%3A0x0000000000000000!2sManila!5e0!3m2!1sen!2sph!4v1700000000000"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen>
-            </iframe>
-          </div>
-
-          <div class="contact-mini">
-            <div class="mini-item">
-              <i class="bi bi-envelope"></i>
-              <span>support@eComAcademy.com</span>
-            </div>
-            <div class="mini-item">
-              <i class="bi bi-telephone"></i>
-              <span>+63 900 000 0000</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FORM -->
-      <div class="col-lg-6">
-        <div class="contact-card h-100">
-          <div class="contact-card-head">
-            <div class="d-flex align-items-center gap-2">
-              <span class="contact-icon"><i class="bi bi-chat-dots"></i></span>
-              <div>
-                <div class="contact-card-title">Send a Message</div>
-                <div class="contact-card-muted">We’d love to hear from you</div>
-              </div>
-            </div>
-          </div>
-
-          <form class="contact-form" action="#" onsubmit="return false;">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label class="form-label">Full Name</label>
-                <input type="text" class="form-control form-control-lg ui-input" placeholder="Enter your name" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Email Address</label>
-                <input type="email" class="form-control form-control-lg ui-input" placeholder="Enter your email" required>
-              </div>
-
-              <div class="col-md-6">
-                <label class="form-label">Phone</label>
-                <input type="tel" class="form-control form-control-lg ui-input" placeholder="+63 9xx xxx xxxx">
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Subject</label>
-                <input type="text" class="form-control form-control-lg ui-input" placeholder="How can we help?" required>
-              </div>
-
-              <div class="col-12">
-                <label class="form-label">Message</label>
-                <textarea class="form-control ui-input" rows="5" placeholder="Write your message..." required></textarea>
-              </div>
-
-              <div class="col-12 d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center justify-content-between gap-3 pt-1">
-                <div class="form-check fancy-check">
-                  <input class="form-check-input" type="checkbox" value="" id="agree" required>
-                  <label class="form-check-label" for="agree">
-                    I agree to the <a href="#" class="contact-link">Privacy Policy</a>.
-                  </label>
                 </div>
 
-                <button type="submit" class="btn btn-brand btn-pill px-4">
-                  Send Message <i class="bi bi-arrow-right ms-1"></i>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
                 </button>
               </div>
             </div>
-          </form>
+          </div>
 
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-
-
-  <!-- NEWSLETTER -->
-  <section class="newsletter-wrap">
+  <section class="py-5" id="categories">
     <div class="container">
-      <div class="newsletter-card">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-6">
-            <h3 class="nl-title mb-2">Join Our Newsletter</h3>
-            <p class="nl-sub mb-0">Subscribe our newsletter to get our latest update &amp; news.</p>
-          </div>
+      <div class="text-center mb-5">
+        <span class="chip">DEPARTMENTS</span>
+        <h2 class="section-title mt-3">Shop By Category</h2>
+      </div>
 
-          <div class="col-lg-6">
-            <form class="nl-form" action="#" onsubmit="return false;">
-              <input type="email" class="nl-input" placeholder="Enter your email:" aria-label="Email" />
-              <button class="nl-btn" type="submit">Subscribe Now</button>
-            </form>
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="cat-card d-flex align-items-center">
+            <div class="cat-icon bg-blue"><i class="bi bi-watch fs-4"></i></div>
+            <p class="cat-title">Watches</p>
           </div>
         </div>
-
-        <div class="nl-sparkle" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-        <div class="nl-dots" aria-hidden="true"></div>
-        <div class="nl-blob-left" aria-hidden="true"></div>
-        <div class="nl-blob-right" aria-hidden="true"></div>
+        <div class="col-6 col-md-3">
+          <div class="cat-card d-flex align-items-center">
+            <div class="cat-icon bg-pink"><i class="bi bi-handbag fs-4"></i></div>
+            <p class="cat-title">Fashion</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="cat-card d-flex align-items-center">
+            <div class="cat-icon bg-green"><i class="bi bi-phone fs-4"></i></div>
+            <p class="cat-title">Phones</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="cat-card d-flex align-items-center">
+            <div class="cat-icon bg-amber"><i class="bi bi-headphones fs-4"></i></div>
+            <p class="cat-title">Audio</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="row g-4">
-
-          <div class="col-lg-4">
-            <div class="footer-brand d-flex align-items-center gap-2 mb-3">
-              <span class="footer-mark" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L3 6.5L12 11L21 6.5L12 2Z" stroke="#f7d978" stroke-width="2" stroke-linejoin="round"/>
-                  <path d="M3 11L12 15.5L21 11" stroke="#f7d978" stroke-width="2" stroke-linejoin="round"/>
-                  <path d="M3 15.5L12 20L21 15.5" stroke="#f7d978" stroke-width="2" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <span class="footer-name">e.ComAcademy</span>
-            </div>
-
-            <p class="footer-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-            </p>
-
-            <div class="footer-socials d-flex gap-2 mt-3">
-              <a class="social-btn" href="#" aria-label="facebook"><i class="bi bi-facebook"></i></a>
-              <a class="social-btn" href="#" aria-label="instagram"><i class="bi bi-instagram"></i></a>
-              <a class="social-btn" href="#" aria-label="twitter"><i class="bi bi-twitter-x"></i></a>
-              <a class="social-btn" href="#" aria-label="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-
-          <div class="col-6 col-lg-2">
-            <h5 class="footer-title">Our Services:</h5>
-            <ul class="footer-links">
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Web Development</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> UI/UX Design</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Management</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Digital Marketing</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Blog News</a></li>
-            </ul>
-          </div>
-
-          <div class="col-6 col-lg-2">
-            <h5 class="footer-title">Quick Links:</h5>
-            <ul class="footer-links">
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Templates</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Blog And Article</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Integrations</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Webinars</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Privacy &amp; Policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4">
-            <h5 class="footer-title">Gallery</h5>
-            <div class="footer-gallery">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop" alt="gallery">
-              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600&auto=format&fit=crop" alt="gallery">
-              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=600&auto=format&fit=crop" alt="gallery">
-              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=600&auto=format&fit=crop" alt="gallery">
-              <img src="https://images.unsplash.com/photo-1522205408450-add114ad53fe?q=80&w=600&auto=format&fit=crop" alt="gallery">
-              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=600&auto=format&fit=crop" alt="gallery">
-            </div>
-          </div>
-
+  <section class="courses-section" id="products">
+    <div class="container position-relative">
+      
+      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-5">
+        <div>
+          <span class="chip">FRESH ARRIVALS</span>
+          <h2 class="section-title mt-3 mb-0">Trending Products<br/>You Can't Miss.</h2>
         </div>
+        <a href="#" class="btn btn-brand btn-pill d-inline-flex align-items-center gap-2">
+          View All Products <i class="bi bi-arrow-right"></i>
+        </a>
       </div>
 
+      <div class="row g-4">
+        
+        <div class="col-md-6 col-lg-4">
+          <article class="course-card h-100">
+            <div class="thumb">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop" alt="Shoe">
+              <span class="tag">Sportswear</span>
+            </div>
+            <div class="card-bodyx">
+              <div class="meta-top d-flex align-items-center justify-content-between">
+                <div class="rating d-flex align-items-center gap-1">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                  </div>
+                  <span class="rate-text">(124)</span>
+                </div>
+                <div class="price">$120.00</div>
+              </div>
+
+              <h3 class="course-title">Nike Air Red Limited Edition Sneaker</h3>
+
+              <div class="info-row">
+                <span><i class="bi bi-check-circle-fill text-success"></i> In Stock</span>
+                <span><i class="bi bi-truck"></i> Free Shipping</span>
+              </div>
+
+              <div class="card-footerx">
+                <div class="instructor d-flex align-items-center gap-2">
+                  <img class="avatar-img" src="https://i.pravatar.cc/60?img=33" alt="Seller">
+                  <span class="name">Nike Official</span>
+                </div>
+                <button class="btn btn-enroll btn-pill"><i class="bi bi-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="course-card h-100">
+            <div class="thumb">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop" alt="Headphone">
+              <span class="tag bg-warning text-dark">Best Seller</span>
+            </div>
+            <div class="card-bodyx">
+              <div class="meta-top d-flex align-items-center justify-content-between">
+                <div class="rating d-flex align-items-center gap-1">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="rate-text">(2k+)</span>
+                </div>
+                <div class="price">$299.00</div>
+              </div>
+
+              <h3 class="course-title">Sony Noise Cancelling Pro Headphones</h3>
+
+              <div class="info-row">
+                <span><i class="bi bi-check-circle-fill text-success"></i> In Stock</span>
+                <span><i class="bi bi-shield-check"></i> 2yr Warranty</span>
+              </div>
+
+              <div class="card-footerx">
+                <div class="instructor d-flex align-items-center gap-2">
+                  <img class="avatar-img" src="https://i.pravatar.cc/60?img=12" alt="Seller">
+                  <span class="name">TechWorld</span>
+                </div>
+                <button class="btn btn-enroll btn-pill"><i class="bi bi-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="course-card h-100">
+            <div class="thumb">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop" alt="Watch">
+              <span class="tag">Accessories</span>
+            </div>
+            <div class="card-bodyx">
+              <div class="meta-top d-flex align-items-center justify-content-between">
+                <div class="rating d-flex align-items-center gap-1">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                  </div>
+                  <span class="rate-text">(45)</span>
+                </div>
+                <div class="price">$85.00</div>
+              </div>
+
+              <h3 class="course-title">Minimalist Analog White Watch</h3>
+
+              <div class="info-row">
+                <span><i class="bi bi-exclamation-circle-fill text-warning"></i> Low Stock</span>
+                <span><i class="bi bi-truck"></i> Free Shipping</span>
+              </div>
+
+              <div class="card-footerx">
+                <div class="instructor d-flex align-items-center gap-2">
+                  <img class="avatar-img" src="https://i.pravatar.cc/60?img=5" alt="Seller">
+                  <span class="name">TimeKeepers</span>
+                </div>
+                <button class="btn btn-enroll btn-pill"><i class="bi bi-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="container mb-5">
+    <div class="newsletter-card" style="background: var(--brand); border-radius: 18px; padding: 40px; box-shadow: var(--shadow); position:relative; overflow:hidden;">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-white">
+                <h3 style="font-weight:900;">Get 20% Off Your First Order</h3>
+                <p class="mb-0 opacity-75">Subscribe to our newsletter and get exclusive deals.</p>
+            </div>
+            <div class="col-lg-6 mt-3 mt-lg-0">
+                <form class="d-flex gap-2 p-2 rounded bg-white bg-opacity-25 border border-white border-opacity-25" onsubmit="return false;">
+                    <input type="email" class="form-control bg-transparent border-0 text-white fw-bold placeholder-white" placeholder="Enter your email..." style="box-shadow:none;">
+                    <button class="btn btn-darksoft rounded-3 fw-bold">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand d-flex align-items-center gap-2 mb-3">
+             <i class="bi bi-bag-fill text-warning"></i> GreenStore
+          </div>
+          <p class="footer-text text-white-50">
+            Premium products sourced responsibly. We believe in quality, sustainability, and exceptional customer service.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+            <h5 class="fw-bold text-white mb-3">Shop</h5>
+            <ul class="footer-links list-unstyled">
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Men's Fashion</a></li>
+                <li><a href="#">Women's Fashion</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+            <h5 class="fw-bold text-white mb-3">Support</h5>
+            <ul class="footer-links list-unstyled">
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-4">
+            <h5 class="fw-bold text-white mb-3">Secure Payment</h5>
+            <div class="d-flex gap-2 text-white fs-3">
+                <i class="bi bi-credit-card"></i>
+                <i class="bi bi-paypal"></i>
+                <i class="bi bi-apple"></i>
+            </div>
+        </div>
+      </div>
       <div class="footer-bottom">
-        Copyright © 2026 <span class="brand-gold">e.ComAcademy</span> || All Rights Reserved
+        Copyright © 2026 <span class="text-warning fw-bold">GreenStore</span>. All Rights Reserved.
       </div>
     </div>
   </footer>
 
-
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
