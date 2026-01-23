@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        /* Custom Styles for Component Refinement */
+        /* Custom Styles */
         #hero {
             background: linear-gradient(45deg, #0d6efd, #0a58ca);
             color: white;
@@ -32,12 +32,12 @@
             margin-top: 50px;
         }
 
-        /* Ensure footer stays at the bottom if content is short */
         body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
+        
         main {
             flex: 1;
         }
@@ -62,13 +62,13 @@
     </nav>
 
     <main>
-        <header id="hero" class="text-center">
+        <section id="hero" class="text-center">
             <div class="container">
                 <h1 class="display-3 fw-bold">Static E-Commerce App</h1>
                 <p class="lead">Built for the S81 Mock Technical Exam</p>
                 <a href="#products" class="btn btn-light btn-lg mt-3">Browse Collection</a>
             </div>
-        </header>
+        </section>
 
         <section class="container my-5">
             <div id="examCarousel" class="carousel slide shadow" data-bs-ride="carousel">
