@@ -1,348 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GreenStore - E-Commerce Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
-  
-  <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom Styles for Component Refinement */
+        #hero {
+            background: linear-gradient(45deg, #0d6efd, #0a58ca);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        /* Ensure footer stays at the bottom if content is short */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+    </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" tabindex="0">
+<body>
 
-  <nav class="navbar navbar-expand-lg site-nav py-3 navbar-light sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
-        <span class="brand-mark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
-                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
-            </svg>
-        </span>
-        <span class="brand-name">GreenStore</span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-1">
-          <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">New Arrivals</a></li>
-          <li class="nav-item"><a class="nav-link" href="#deals">Daily Deals</a></li>
-        </ul>
-
-        <div class="d-flex align-items-center gap-3">
-             <a href="#" class="text-dark position-relative">
-                <i class="bi bi-search fs-5"></i>
-             </a>
-             <a href="#" class="btn btn-brand btn-pill text-white d-inline-flex align-items-center gap-2">
-                <i class="bi bi-cart3"></i> My Cart <span class="badge bg-white text-success rounded-pill">2</span>
-             </a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero" id="hero">
-    <div class="container">
-      <div class="hero-surface">
-        <div class="row g-4 align-items-center">
-
-          <div class="col-lg-6">
-            <div class="hero-left">
-              <div class="hero-kicker">SPRING COLLECTION 2026</div>
-
-              <h1 class="hero-title">
-                Sustainable Style <br/>
-                <span class="circle-underline">Naturally</span> Yours.
-              </h1>
-
-              <p class="hero-desc">
-                Discover our new range of eco-friendly products, crafted with care for you and the planet. Free shipping on orders over $50.
-              </p>
-
-              <div class="d-flex gap-3">
-                <a href="#products" class="btn btn-darksoft btn-pill">Shop Now</a>
-                <a href="#categories" class="btn btn-outline-secondary btn-pill">View Catalog</a>
-              </div>
-
-              <svg class="hero-dash" viewBox="0 0 300 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M10,55 C70,10 120,95 180,50 C220,20 250,30 285,25" fill="none" stroke="rgba(102,182,0,.9)" stroke-width="3" stroke-dasharray="6 7" stroke-linecap="round"/>
-                <path d="M282 24 L292 18 L288 28 Z" fill="rgba(102,182,0,.9)"/>
-              </svg>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">ZUITT SHOP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
             </div>
-          </div>
+        </div>
+    </nav>
 
-          <div class="col-lg-6">
-            <div class="hero-right hero-carousel">
-              <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    <main>
+        <header id="hero" class="text-center">
+            <div class="container">
+                <h1 class="display-3 fw-bold">Static E-Commerce App</h1>
+                <p class="lead">Built for the S81 Mock Technical Exam</p>
+                <a href="#products" class="btn btn-light btn-lg mt-3">Browse Collection</a>
+            </div>
+        </header>
+
+        <section class="container my-5">
+            <div id="examCarousel" class="carousel slide shadow" data-bs-ride="carousel">
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="New Arrivals">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h3>New Arrivals</h3>
+                            <p>Check out our latest seasonal drops.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Best Sellers">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h3>Best Sellers</h3>
+                            <p>The items our community loves the most.</p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 hero-slide-img" alt="Product 1">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="fw-bold text-shadow">Nike Red Limited</h5>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 hero-slide-img" alt="Product 2">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="fw-bold text-shadow">Pro Audio Gear</h5>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 hero-slide-img" alt="Product 3">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="fw-bold text-shadow">Smart Accessories</h5>
-                    </div>
-                  </div>
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon"></span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#examCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon"></span>
+                <button class="carousel-control-next" type="button" data-bs-target="#examCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
                 </button>
-              </div>
             </div>
-          </div>
+        </section>
 
+        <div class="container text-center my-5" id="products">
+            <h2 class="display-5 fw-semibold">Featured Products</h2>
+            <div class="mx-auto bg-primary mb-4" style="height: 4px; width: 60px;"></div>
         </div>
-      </div>
-    </div>
-  </header>
 
-  <section class="py-5" id="categories">
-    <div class="container">
-      <div class="text-center mb-5">
-        <span class="chip">DEPARTMENTS</span>
-        <h2 class="section-title mt-3">Shop By Category</h2>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-6 col-md-3">
-          <div class="card cat-card d-flex align-items-center">
-            <div class="cat-icon bg-blue"><i class="bi bi-watch fs-4"></i></div>
-            <p class="cat-title">Watches</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="card cat-card d-flex align-items-center">
-            <div class="cat-icon bg-pink"><i class="bi bi-handbag fs-4"></i></div>
-            <p class="cat-title">Fashion</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="card cat-card d-flex align-items-center">
-            <div class="cat-icon bg-green"><i class="bi bi-phone fs-4"></i></div>
-            <p class="cat-title">Phones</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="card cat-card d-flex align-items-center">
-            <div class="cat-icon bg-amber"><i class="bi bi-headphones fs-4"></i></div>
-            <p class="cat-title">Audio</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="courses-section" id="products">
-    <div class="container position-relative">
-      
-      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-5">
-        <div>
-          <span class="chip">FRESH ARRIVALS</span>
-          <h2 class="section-title mt-3 mb-0">Trending Products<br/>You Can't Miss.</h2>
-        </div>
-        <a href="#" class="btn btn-brand btn-pill d-inline-flex align-items-center gap-2">
-          View All Products <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
-
-      <div class="row g-4">
-        
-        <div class="col-md-6 col-lg-4">
-          <div class="card course-card h-100">
-            <div class="thumb">
-              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop" alt="Shoe">
-              <span class="tag">Sportswear</span>
-            </div>
-            <div class="card-bodyx">
-              <div class="meta-top d-flex align-items-center justify-content-between">
-                <div class="rating d-flex align-items-center gap-1">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-                  </div>
-                  <span class="rate-text">(124)</span>
+        <section class="container mb-5">
+            <div class="row g-4">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Headphones">
+                        <div class="card-body">
+                            <h5 class="card-title">Wireless Headphones</h5>
+                            <p class="card-text text-muted">Immersive sound quality with 40-hour battery life.</p>
+                            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="price">$120.00</div>
-              </div>
-
-              <h3 class="course-title">Nike Air Red Limited Edition Sneaker</h3>
-
-              <div class="info-row">
-                <span><i class="bi bi-check-circle-fill text-success"></i> In Stock</span>
-                <span><i class="bi bi-truck"></i> Free Shipping</span>
-              </div>
-
-              <div class="card-footerx">
-                <div class="instructor d-flex align-items-center gap-2">
-                  <img class="avatar-img" src="https://i.pravatar.cc/60?img=33" alt="Seller">
-                  <span class="name">Nike Official</span>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1526170315876-3d8c039ea237?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Camera">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Camera</h5>
+                            <p class="card-text text-muted">Capture every moment with stunning 4K resolution.</p>
+                            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-enroll btn-pill"><i class="bi bi-cart-plus"></i> Add</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card course-card h-100">
-            <div class="thumb">
-              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop" alt="Headphone">
-              <span class="tag bg-warning text-dark">Best Seller</span>
-            </div>
-            <div class="card-bodyx">
-              <div class="meta-top d-flex align-items-center justify-content-between">
-                <div class="rating d-flex align-items-center gap-1">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                  <span class="rate-text">(2k+)</span>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Shoes">
+                        <div class="card-body">
+                            <h5 class="card-title">Sport Sneakers</h5>
+                            <p class="card-text text-muted">Performance and style combined for your daily run.</p>
+                            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="price">$299.00</div>
-              </div>
-
-              <h3 class="course-title">Sony Noise Cancelling Pro Headphones</h3>
-
-              <div class="info-row">
-                <span><i class="bi bi-check-circle-fill text-success"></i> In Stock</span>
-                <span><i class="bi bi-shield-check"></i> 2yr Warranty</span>
-              </div>
-
-              <div class="card-footerx">
-                <div class="instructor d-flex align-items-center gap-2">
-                  <img class="avatar-img" src="https://i.pravatar.cc/60?img=12" alt="Seller">
-                  <span class="name">TechWorld</span>
-                </div>
-                <button class="btn btn-enroll btn-pill"><i class="bi bi-cart-plus"></i> Add</button>
-              </div>
             </div>
-          </div>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">© 2026 Zuitt Coding Bootcamp - Mock Technical Exam</p>
+            <small class="text-muted">Designed by [Your Name]</small>
         </div>
+    </footer>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="card course-card h-100">
-            <div class="thumb">
-              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop" alt="Watch">
-              <span class="tag">Accessories</span>
-            </div>
-            <div class="card-bodyx">
-              <div class="meta-top d-flex align-items-center justify-content-between">
-                <div class="rating d-flex align-items-center gap-1">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-                  </div>
-                  <span class="rate-text">(45)</span>
-                </div>
-                <div class="price">$85.00</div>
-              </div>
-
-              <h3 class="course-title">Minimalist Analog White Watch</h3>
-
-              <div class="info-row">
-                <span><i class="bi bi-exclamation-circle-fill text-warning"></i> Low Stock</span>
-                <span><i class="bi bi-truck"></i> Free Shipping</span>
-              </div>
-
-              <div class="card-footerx">
-                <div class="instructor d-flex align-items-center gap-2">
-                  <img class="avatar-img" src="https://i.pravatar.cc/60?img=5" alt="Seller">
-                  <span class="name">TimeKeepers</span>
-                </div>
-                <button class="btn btn-enroll btn-pill"><i class="bi bi-cart-plus"></i> Add</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="container mb-5">
-    <div class="card newsletter-card" style="background: var(--brand); border-radius: 18px; padding: 40px; box-shadow: var(--shadow); position:relative; overflow:hidden;">
-        <div class="row align-items-center">
-            <div class="col-lg-6 text-white">
-                <h3 style="font-weight:900;">Get 20% Off Your First Order</h3>
-                <p class="mb-0 opacity-75">Subscribe to our newsletter and get exclusive deals.</p>
-            </div>
-            <div class="col-lg-6 mt-3 mt-lg-0">
-                <form class="d-flex gap-2 p-2 rounded bg-white bg-opacity-25 border border-white border-opacity-25" onsubmit="return false;">
-                    <input type="email" class="form-control bg-transparent border-0 text-white fw-bold placeholder-white" placeholder="Enter your email..." style="box-shadow:none;">
-                    <button class="btn btn-darksoft rounded-3 fw-bold">Subscribe</button>
-                </form>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-4">
-          <div class="footer-brand d-flex align-items-center gap-2 mb-3">
-             <i class="bi bi-bag-fill text-warning"></i> GreenStore
-          </div>
-          <p class="footer-text text-white-50">
-            Premium products sourced responsibly. We believe in quality, sustainability, and exceptional customer service.
-          </p>
-        </div>
-        <div class="col-6 col-lg-2">
-            <h5 class="fw-bold text-white mb-3">Shop</h5>
-            <ul class="footer-links list-unstyled">
-                <li><a href="#">New Arrivals</a></li>
-                <li><a href="#">Best Sellers</a></li>
-                <li><a href="#">Men's Fashion</a></li>
-                <li><a href="#">Women's Fashion</a></li>
-            </ul>
-        </div>
-        <div class="col-6 col-lg-2">
-            <h5 class="fw-bold text-white mb-3">Support</h5>
-            <ul class="footer-links list-unstyled">
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Order Status</a></li>
-                <li><a href="#">Returns</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="col-lg-4">
-            <h5 class="fw-bold text-white mb-3">Secure Payment</h5>
-            <div class="d-flex gap-2 text-white fs-3">
-                <i class="bi bi-credit-card"></i>
-                <i class="bi bi-paypal"></i>
-                <i class="bi bi-apple"></i>
-            </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        Copyright © 2026 <span class="text-warning fw-bold">GreenStore</span>. All Rights Reserved.
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
